@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>application form</title>
+
+    <link href="style.css" rel="stylesheet">
+  
+  </head>
+  <body>
+
+    <div class="header">
+      <h2>Application Form</h2>
+      <p>Fill the form below and our career Advisor will contact you</p>
+    </div>
+
+
+    <form class="grid-container" action="#" method="POST" onsubmit="return validation()">
+      
+      <div class="grid-item">
+        <label for="fname">First name:*</label> 
+      
+        <br>
+        <input type="text" required id="fname" class="data-field"  name="fname" onkeyup="lettersOnly(fname)">
+        
+        <span id="validFname" class="firstName"></span>
+
+      </div>
+
+      <div class="grid-item">
+        <label for="lname">Last name:*</label> 
+        
+        <br>
+        <input type="text" required id="lname" class="data-field" name="lname" onkeyup="lettersOnly(lname)" >
+        <span id="validLname" class="lastName"></span>
+
+      </div>
+
+      <div class="grid-item">
+        <label for="date">Date of Birth:*</label> 
+        
+        <br>
+        <input type="date" id="dob" class="data-field" name="dob" required>
+        <span id="validDob" class="dateOfBirth"></span>
+
+      </div>
+
+      <div class="grid-item">
+        <label for="gender" >Gender:*</label> 
+        
+        <br>
+        <select name="gender" id="gender" class="data-field" required>
+          <option value="select" disabled selected>Select</option> 
+          <option value="male">Male</option> 
+          <option value="female">Female</option>
+        </select>
+
+      </div>
+
+      <div class="grid-item">
+        <label for="city">City:</label> 
+        
+        <br>
+        <input type="text" required id="city" class="data-field" name="city" onkeyup="lettersOnly(city)">
+        <span id="validCity" class="cityName"></span>
+
+      </div>
+
+      <div class="grid-item">
+        
+        
+        <label for="country-names">Country:*</label>
+        
+        <br>
+        <select name="country-names" id="country" class="data-field" required>
+          <option value="" disabled selected>Select</option> 
+          <option value="India">India</option> 
+          <option value="USA">USA</option> 
+          <option value="Japan">Japan</option> 
+          <option value="Russia">Russia</option>
+          <option value="China">China</option>
+        </select>
+        <span id="countryError"></span>
+      </div>
+
+      <div class="grid-item">
+        <label for="qualification">Highest-Qualification:*</label>
+        
+        <br>
+        <select name="qualification" id="qualification" class="data-field" required>
+          <option value="" disabled selected>Select</option> 
+          <option value="Post Graduate">Post Graduate</option> 
+          <option value="Under Graduate">Under Graduate</option> 
+          <option value="H.S.C(12th)">H.S.C(12th)</option> 
+          <option value="S.S.C(10th)">S.S.C(10th)</option>
+          <option value="others">others</option>
+        </select>
+    
+      </div>
+
+      <div class="grid-item">
+        <label for="experience">Work Experience (years):*</label> 
+        
+        <br>
+        <input type="text" required id="wExperience" class="data-field" onkeyup="workNumbersOnly()" >
+        <span id="validWE" class="workExp"></span>
+      </div>
+
+      <div class="grid-item">
+        <label for="phone">Phone Number:*</label> 
+        
+        <br>
+        <input type="text" required id="phoneNumber" class="data-field" placeholder="e.g. 9XXXXXXXXX" name="phone" onkeyup="phoneNumbersOnly()">
+        <span id="validPhone" class="mobileNumber"></span>
+
+      </div>
+
+      <div class="grid-item">
+        <label for="email">E-Mail ID:*</label> 
+        
+        <br>
+        <input type="text" required id="email" class="data-field" name="email" >
+        <span id="emailError" style="color: red; width: 200px;"></span>
+                    
+    
+      </div>
+
+      <div class="grid-item">
+        <label for="payment">Want to pay in EMI:*</label>
+        
+        <br>
+        <select name="payment" id="payment" class="data-field" required>
+          <option value="" disabled selected>Select</option> 
+          <option value="3 Month">3 Month</option> 
+          <option value="6 Month">6 Month</option> 
+          <option value="12 Month">12 Month</option> 
+          <option value="18 Month">18 Month</option>
+          <option value="24 Month">24 Month</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div class="grid-item center-item">
+        <label for="button" class="TnC"> <input type="checkbox" id="checkbox" required> I authorise "Eduonix learning solution pvt ltd" and its representatives to call, SMS, Email, or Whatsapp me</label>
+        <br>
+        <!-- <input type="button" class="button" value="submit"></button> -->
+        <button type="submit" class="button" >Submit</button>
+      </div>
+
+      
+    </form>
+    <script src="script.js"></script>
+  
+  </body>
+</html>
